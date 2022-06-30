@@ -1,9 +1,6 @@
-import express from "express";
+import app from './app'
 
-const app = express();
 
-app.get("/", (req, res) => {
-  res.send("hello world");
-});
+//Arrancar el servidor o ponerlo a la escucha
 app.listen(3000);
 console.log("server on port", 3000);
