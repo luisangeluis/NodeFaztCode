@@ -1,5 +1,5 @@
-import app from './app'
-
+import app from './app';
+import './database.js';
 
 //Arrancar el servidor o ponerlo a la escucha
 app.listen(3000);
