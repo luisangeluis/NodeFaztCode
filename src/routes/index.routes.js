@@ -20,12 +20,17 @@ router.get("/edit", (req, res) => {
   res.render("edit");
 });
 
-router.post('/tasks/add',(req,res)=>{
-  console.log(req.body);
-  const task =Task(req.body)
-  console.log(task);
+router.post('/tasks/add',async(req,res)=>{
+  // // console.log(req.body);
+  // const task =Task(req.body)
+  // // console.log(task);
+  // const taskSaved = await task.save();
+  // console.log(taskSaved);
+  // res.send('added');
 
-  res.send('added');
+  const task = Task(req.body)
+  await task.save();
+  res.redirect('/');
 })
 
 export default router;
