@@ -1,8 +1,8 @@
 import { connect } from "mongoose";
 
 (async () => {
-  const password = "1vFrD2Lc331i4Cb2";
-  const dbname = "pokedex";
+  // const password = "1vFrD2Lc331i4Cb2";
+  // const dbname = "pokedex";
 
   try {
     const db = await connect(

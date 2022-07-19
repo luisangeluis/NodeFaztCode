@@ -8,8 +8,10 @@ const router = Router();
 //   res.send("<h1>hello world</h1>");
 // });
 
-router.get("/", (req, res) => {
-  res.render("index");
+router.get("/", async(req, res) => {
+  const tasks =await Task.find().lean()
+  console.log(tasks);
+  res.render("index",{tasks:tasks});
 });
 
 router.get("/about", (req, res) => {
