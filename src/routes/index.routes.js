@@ -30,9 +30,14 @@ router.post('/tasks/add',async(req,res)=>{
   // console.log(taskSaved);
   // res.send('added');
 
-  const task = Task(req.body)
-  await task.save();
-  res.redirect('/');
+  try{
+    const task = Task(req.body)
+    await task.save();
+    res.redirect('/');
+  }catch(error){
+    console.log(error);
+  }
+ 
 })
 
 export default router;

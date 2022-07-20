@@ -1,23 +1,2 @@
-<form action="/tasks/add" method="POST">
-  <div>
-    <label for="title">Title</label>
-    <input type="text" name="title" placeholder="title" id="title">
-  </div>
-  <div>
-    <label for="description">description</label>
-    <input type="text" name="description" placeholder="Description" id="description">
-  </div>
-  <button>Add</button>
-</form>
-
-
-<ul>
-  {{#each tasks}}
-  <li>
-    {{title}}
-    <p>{{description}}</p>
-    <button>Edit</button>
-    <button>Delete</button>
-  </li>
-  {{/each}}
-</ul>
+{{> tasks/tasksForm}}
+{{> tasks/tasksTable}}
